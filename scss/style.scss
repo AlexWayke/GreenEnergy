@@ -1,0 +1,118 @@
+// Null styles =========================
+@import "_null.scss";
+
+//  Fonts ==============================
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:regular,700);
+
+// Main styles =========================
+
+html,
+body {
+    font-family: Noto Sans;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    height: 100%;
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 6.4em;
+    font-weight: 700;
+    color: #fff;
+}
+h2 {
+    font-size: 1.8em;
+}
+
+.button {
+    position: relative;
+
+    &-text {
+        font-size: 1.8em;
+        position: absolute;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        left: -50px;
+        width: 100px;
+        height: 100px;
+        background: no-repeat center url(/scr/icon/Arrow.svg);
+        border: 2px solid #fff;
+        border-radius: 50%;
+    }
+
+    &:hover::before {
+        background: #A9A32A no-repeat center url(/scr/icon/Arrow.svg);
+    }
+}
+
+// Social ============================
+.social {
+
+    &-list {
+    }
+}
+
+// Header ============================
+.header {
+    display: flex;
+
+    height: 100vh;
+    width: 100vw;
+    padding: 70px 0 38px;
+
+
+    background: center no-repeat url(/scr/header/bg/1.jpg);
+    background-size: cover;
+    color: #fff;
+
+
+    &-logo {
+        text-align: center;
+        margin-bottom: 15.5%;
+    }
+
+    &-subtitle {
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    &-title {
+        text-align: center;
+        margin-bottom: 12%;
+    }
+    
+    &-btn {
+        margin: 0 auto;
+        max-width: 308px;
+    }
+
+    &-social {
+    }
+}
+
+.discriptor {
+    font-size: 4.2em;
+}
+
+.social {
+}
+.social-list {
+}
