@@ -85,6 +85,9 @@ body {
 
 .container {
   width: 1200px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   margin: 0 auto;
 }
 
@@ -123,10 +126,30 @@ h2 {
   background: #A9A32A no-repeat center url(/scr/icon/Arrow.svg);
 }
 
+.social {
+  max-width: 170px;
+}
+
+.social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
   width: 100vw;
   padding: 70px 0 38px;
@@ -151,8 +174,15 @@ h2 {
 }
 
 .header-btn {
-  margin: 0 auto;
+  margin: 0 auto 30%;
   max-width: 308px;
+}
+
+.header-social {
+  margin: 0 auto;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .discriptor {
