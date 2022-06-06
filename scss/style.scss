@@ -3,6 +3,19 @@
 
 //  Fonts ==============================
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:regular,700);
+h1 {
+    font-size: 6.4em;
+    font-weight: 700;
+    color: #fff;
+}
+h2{
+    font-size: 2.4em;
+    font-style: bold;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.8em;
+}
 
 // Main styles =========================
 
@@ -30,13 +43,11 @@ body {
     margin: 0 auto;
 }
 
-h1 {
-    font-size: 6.4em;
-    font-weight: 700;
-    color: #fff;
-}
-h2 {
-    font-size: 1.8em;
+.section {
+    padding-top: 150px;
+    &:last-child{
+        padding-bottom: 150px;
+    }
 }
 
 .button {
@@ -60,7 +71,8 @@ h2 {
     }
 
     &:hover::before {
-        background: #A9A32A no-repeat center url(/scr/icon/Arrow.svg);
+        background-color: #A9A32A;
+        transition: background-color 150ms linear;
     }
 }
 
@@ -79,7 +91,7 @@ h2 {
     flex: 1 1 auto;
     flex-direction: column;
 
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     padding: 70px 0 38px;
 
@@ -117,4 +129,45 @@ h2 {
 
 .discriptor {
     font-size: 4.2em;
+}
+// servises===========================
+.servises {
+    &-title{
+        width: 100%;
+        color: #868585;
+        margin-bottom: 60px;
+    }
+
+    &-text{
+        
+    }
+
+    &-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 90px;
+        &--column{
+            overflow: hidden;
+        }
+
+        &--img{
+            object-fit: cover;
+        }
+    }
+}
+.text {
+
+    &-title{
+        color: #303030;
+        font-weight: 700;
+        font-size: 1.8em;
+
+        margin-bottom: 15px;
+    }
+
+    &-content{
+        font-size: 1.4em;
+        margin-bottom: 50px;
+        line-height: 19px;
+    }
 }

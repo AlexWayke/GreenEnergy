@@ -57,6 +57,22 @@ button {
   cursor: pointer;
 }
 
+h1 {
+  font-size: 6.4em;
+  font-weight: 700;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2.4em;
+  font-style: bold;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
 html,
 body {
   font-family: Noto Sans;
@@ -91,14 +107,12 @@ body {
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 6.4em;
-  font-weight: 700;
-  color: #fff;
+.section {
+  padding-top: 150px;
 }
 
-h2 {
-  font-size: 1.8em;
+.section:last-child {
+  padding-bottom: 150px;
 }
 
 .button {
@@ -123,7 +137,9 @@ h2 {
 }
 
 .button:hover::before {
-  background: #A9A32A no-repeat center url(/scr/icon/Arrow.svg);
+  background-color: #A9A32A;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
 }
 
 .social {
@@ -150,7 +166,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   padding: 70px 0 38px;
   background: center no-repeat url(/scr/header/bg/1.jpg);
@@ -187,4 +203,40 @@ h2 {
 
 .discriptor {
   font-size: 4.2em;
+}
+
+.servises-title {
+  width: 100%;
+  color: #868585;
+  margin-bottom: 60px;
+}
+
+.servises-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 90px;
+}
+
+.servises-content--column {
+  overflow: hidden;
+}
+
+.servises-content--img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text-title {
+  color: #303030;
+  font-weight: 700;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.text-content {
+  font-size: 1.4em;
+  margin-bottom: 50px;
+  line-height: 19px;
 }
