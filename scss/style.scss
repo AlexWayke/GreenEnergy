@@ -56,6 +56,7 @@ body {
     &-text {
         font-size: 1.8em;
         position: absolute;
+        display: inline-block;
     }
 
     &::before {
@@ -76,6 +77,31 @@ body {
     }
 }
 
+.arr {
+    cursor: pointer;
+    left: 100%;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    &-prev{
+        background: no-repeat url(/scr/icon/prev.svg);
+        margin-right: 20px;
+        & span{
+            display: inline-block;
+            width: 40px;
+            height: 10px;
+        }
+    }
+    &-next{
+        background: no-repeat url(/scr/icon/next.svg);
+        & span{
+            display: inline-block;
+            width: 40px;
+            height: 10px;
+        }
+    }
+}
+
 // Social ============================
 .social {
     max-width: 170px;
@@ -91,9 +117,10 @@ body {
     flex: 1 1 auto;
     flex-direction: column;
 
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
-    padding: 70px 0 38px;
+    // strech header
+    // padding: 8% 0 4.5%;
 
 
     background: center no-repeat url(/scr/header/bg/1.jpg);
@@ -103,7 +130,7 @@ body {
 
     &-logo {
         text-align: center;
-        margin-bottom: 15.5%;
+        margin: 8% 0 15.5%;
     }
 
     &-subtitle {
@@ -117,13 +144,12 @@ body {
     }
     
     &-btn {
-        margin: 0 auto 30%;
-        max-width: 308px;
+        margin: 0 auto 266px;
+        max-width: 260px;
     }
 
     &-social {
         margin: 0 auto;
-        align-items: flex-end;
     }
 }
 
@@ -131,15 +157,40 @@ body {
     font-size: 4.2em;
 }
 // servises===========================
-.servises {
+.servises,
+.tarif{
     &-title{
         width: 100%;
         color: #868585;
         margin-bottom: 60px;
     }
+    
+    &-item{
+        margin-bottom: 50px;
+        &--title{
+            color: #303030;
+            font-weight: 700;
+            font-size: 1.8em;
+            line-height: 24px;
+    
+            margin-bottom: 15px;
+        }
 
-    &-text{
-        
+        &--text{
+            font-size: 1.4em;
+            line-height: 19px;
+        }
+    }
+
+    &-info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+
+        &--column {
+            height: 100%;
+            position: relative;
+        }
     }
 
     &-content{
@@ -154,20 +205,27 @@ body {
             object-fit: cover;
         }
     }
-}
-.text {
 
-    &-title{
-        color: #303030;
-        font-weight: 700;
-        font-size: 1.8em;
+    &-slider{
+        display: flex;
+        flex-direction: row;
 
-        margin-bottom: 15px;
-    }
+        &--link{
+            display: inline-block;
+            margin-right: 40px;
+            line-height: 24px;
+            font-size: 1.8em;
+            height: 30px;
+            
+            background-image: linear-gradient(#303030, #303030);
+            background-position: 50% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 1px;
+            transition: background-size .3s;
 
-    &-content{
-        font-size: 1.4em;
-        margin-bottom: 50px;
-        line-height: 19px;
+            &:hover{
+                background-size: 100% 1px;
+            }
+        }
     }
 }
